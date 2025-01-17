@@ -65,5 +65,9 @@ def webhook():
     twilio_response.message(bot_reply)
     return str(twilio_response)
 
+@app.route('/')
+def home():
+    return "Welcome to the After Live Chatbot API. This service is running!"
+
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)
